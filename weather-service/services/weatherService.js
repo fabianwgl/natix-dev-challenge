@@ -20,6 +20,7 @@ function mockWeatherService(city) { // parameter is not used in this mock
   const now = Date.now();
 
   // Remove requests older than 1 hour
+  // Probably its better to use a simple counter that resets every hour
   requestTimestamps = requestTimestamps.filter(ts => now - ts < 3600_000);
 
   if (requestTimestamps.length >= 100) {
