@@ -31,7 +31,6 @@ describe('mockWeatherService', () => {
     // 3 requests where already made in the beforeEach, so we can make 97 more
     for (let i = 0; i <= 97; i++) {
       const res = mockWeatherService(`city${i}`);
-      console.log(`Request ${i + 1}:`, res);
       expect(res).not.toHaveProperty('error');
     }
     // 101st request in an hour should be blocked
