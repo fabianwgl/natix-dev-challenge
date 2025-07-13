@@ -8,7 +8,7 @@ let requestTimestamps = [];
  * @param {string} city 
  * @returns mocked weather data for the specified city
  */
-function mockWeatherService(city) {
+function mockWeatherService(city) { // parameter is not used in this mock
   const now = Date.now();
 
   // Remove requests older than 1 hour
